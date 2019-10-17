@@ -14,6 +14,7 @@ This repository is the implementation of our paper "[Facial Action Unit Detectio
   - division_layer: divide a feature map into multiple identical subparts
   - combination_layer: combine mutiple sub feature maps
   - multi_stage_meanfield_au3 and meanfield_iteration: fully-connected conditional random field
+  - lp_norm_layer and cosine_similarity_loss_layer: cosine similarity loss for AU intensity estimation
   - sigmoid_cross_entropy_loss_layer: the weighting for the loss of each element is added
   - euclidean_loss_layer: used for AU intensity estimation: weighting the loss of each element, and setting the gradient as zero when the corresponding AU label is missing.
   - convert_data: convert the AU labels and weights to leveldb or lmdb
