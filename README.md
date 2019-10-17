@@ -37,22 +37,27 @@ The 3-fold partitions of both BP4D and DISFA can be found [here](https://github.
   - Modify the paths of data
   - A recommended training strategy is that selecting a small set of training data for validation to choose a proper maximum iterations and then using all the training data to retrain the model
 
-## Training for AU detection
+## Training
+- AU detection
 ```
 cd model
 sh train_net.sh
 ```
-
-## Training for AU intensity estimation
+- AU intensity estimation
 ```
-cd model
 sh train_net_intensity.sh
 ```
 
 ## Testing
+- AU detection
 ```
-cd model
 python test.py
+```
+- AU intensity estimation
+```
+python test_intensity.py
+matlab -nodisplay
+>>evaluate_intensity
 ```
 
 ## Citation
