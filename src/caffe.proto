@@ -1,0 +1,36 @@
+message LayerParameter {
+	optional DivisionParameter division_param = 1;
+	optional CombinationParameter combination_param = 2;
+	optional MultiStageMeanfieldAU3Parameter multi_stage_meanfield_au3_param = 3;
+}
+
+message DivisionParameter {
+  required uint32 width = 1;
+  required uint32 height = 2;
+  repeated uint32 xcoord = 3;
+  repeated uint32 ycoord = 4;
+}
+
+message CombinationParameter {
+  repeated uint32 xcoord = 1;
+  repeated uint32 ycoord = 2;
+}
+
+message MultiStageMeanfieldAU3Parameter {
+    enum Mode {
+      POTTS = 0;
+    }
+    optional Mode compatibility_mode = 1 [default = POTTS];
+    optional float threshold = 2;
+
+    required float theta_alpha = 3 [default = 10.];
+    required float theta_beta = 4 [default = 10.];
+    required float theta_gamma = 5 [default = 10.];
+
+    required uint32 num_iterations = 6 [default = 1];
+    optional float spatial_filter_weight = 7 [default = 1];
+    optional float bilateral_filter_weight = 8 [default = 1];
+
+    optional float forced_spatial_filter_weight = 9;
+    optional float forced_bilateral_filter_weight = 10;
+}
