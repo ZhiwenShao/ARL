@@ -1,5 +1,5 @@
 # ARL
-This repository is the implementation of the paper "[Facial Action Unit Detection Using Attention and Relation Learning](https://arxiv.org/pdf/1808.03457.pdf)". The code is mainly borrowed from [JAA-Net](https://github.com/ZhiwenShao/JAANet).
+This repository is the implementation of our paper "[Facial Action Unit Detection Using Attention and Relation Learning](https://arxiv.org/pdf/1808.03457.pdf)". The code is mainly borrowed from [JAA-Net](https://github.com/ZhiwenShao/JAANet).
 
 # Getting Started
 ## Dependencies
@@ -11,21 +11,18 @@ This repository is the implementation of the paper "[Facial Action Unit Detectio
   - Add the content of "caffe.proto" into "src/caffe/proto"
   - Add "tools/convert_data.cpp" into "tools"
 - New implementations used in our paper:
-  - au_mask_based_land_layer: generate attention maps given the locations of landmarks
   - division_layer: divide a feature map into multiple identical subparts
   - combination_layer: combine mutiple sub feature maps
-  - data_layer and data_transform_layer: the processing of landmarks in the case of mirroring faces is added
-  - align_data_transform_layer: reset the order and change the coordinates for landmarks in the cases of mirroring and cropping
-  - dice_coef_loss_layer: Dice coefficient loss
-  - softmax_loss_layer: the weighting for the loss of each element is added
-  - euclidean_loss_layer: the weighting for the loss of each element and the normalizing with inter-ocular distance are added
-  - convert_data: convert the AU and landmark labels, weights, and reflect_49 to leveldb or lmdb
+  - multi_stage_meanfield_au3: fully-connected conditional random field
+  - sigmoid_cross_entropy_loss_layer: the weighting for the loss of each element is added
+  - euclidean_loss_layer: used for AU intensity estimation: weighting the loss of each element, and setting the gradient as zero when the corresponding AU label is missing.
+  - convert_data: convert the AU labels and weights to leveldb or lmdb
 - Build Caffe
 
 ## Datasets
 [BP4D](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html) and [DISFA](http://www.engr.du.edu/mmahoor/DISFA.htm)
 
-The 3-fold partitions of both BP4D and DISFA are provided in the folder "data", in which the path file of DISFA contains each frame of videos
+The 3-fold partitions of both BP4D and DISFA can be found [here](https://github.com/ZhiwenShao/JAANet/tree/master/data)
 
 ## Preprocessing
 - Prepare the training data
