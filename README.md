@@ -57,7 +57,7 @@ python test.py
 ```
 python test_intensity.py
 matlab -nodisplay
->>evaluate_intensity
+>> evaluate_intensity
 ```
 
 ## Citation
