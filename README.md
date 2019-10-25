@@ -6,8 +6,8 @@ This repository is the implementation of our paper "[Facial Action Unit Detectio
 - Dependencies for [Caffe](http://caffe.berkeleyvision.org/install_apt.html) are required
 
 - The new implementations in the folders "src" and "include" should be merged into the official [Caffe](https://github.com/BVLC/caffe):
-  - Add the .cpp, .cu files into "src/caffe/layers"
-  - Add the .hpp files into "include/caffe/layers"
+  - Add the .cpp, .cu files into "src/caffe/layers", except "modified_permutohedral.cpp" should be moved into "src/caffe/util/"
+  - Add the .hpp files into "include/caffe/layers", except "modified_permutohedral.hpp" should be moved into "include/caffe/util/"
   - Add the content of "caffe.proto" into "src/caffe/proto"
   - Add "tools/convert_data.cpp" into "tools"
 - New implementations used in our paper:
