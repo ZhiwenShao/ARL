@@ -47,6 +47,7 @@ sh train_net.sh
 ```
 sh train_net_intensity.sh
 ```
+- Trained models on BP4D with 3-fold cross-validation for AU detection and on FERA 2015 for AU intensity estimation can be downloaded [here](https://sjtueducn-my.sharepoint.com/:f:/g/personal/shaozhiwen_sjtu_edu_cn/EsN4dd-08I9FtHnHw4bymsEB87xW7NETeW1BlIA6OS2pFw?e=Fu2HAf)
 
 ## Testing
 - AU detection
