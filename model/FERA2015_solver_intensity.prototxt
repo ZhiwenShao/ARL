@@ -1,4 +1,4 @@
-net: "BP4D_train_val_intensity.prototxt"
+net: "FERA2015_train_val_intensity.prototxt"
 base_lr: 0.0006
 lr_policy: "step"
 gamma: 0.3
