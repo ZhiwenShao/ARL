@@ -37,7 +37,7 @@ layer {
   type: "Data"
   top: "weight"
   data_param {
-    source: "BP4D_train_intensity_right_weight_ldb"
+    source: "BP4D_train_intensity_weight_ldb"
     batch_size: 8
     backend: LMDB
   }
