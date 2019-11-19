@@ -38,8 +38,8 @@ for j=1:AU_num
     curr_AUoccur = curr_AUoccur(right_ind,1);
     t_ind = find (curr_AUoccur>threshold);
 
-	AUoccur_id{j,1} = t_ind;    
-	AUoccur_rate(j,1) = size(AUoccur_id{j,1},1)/size(curr_AUoccur,1);
+    AUoccur_id{j,1} = t_ind;    
+    AUoccur_rate(j,1) = size(AUoccur_id{j,1},1)/size(curr_AUoccur,1);
 end
     
 AU_weight = 1./AUoccur_rate';
