@@ -60,6 +60,10 @@ python test_intensity.py
 matlab -nodisplay
 >> evaluate_intensity
 ```
+- Visualize attention maps
+```
+python visualize_attention_map.py
+```
 
 ## Citation
 If you use this code for your research, please cite our paper
