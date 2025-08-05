@@ -23,7 +23,8 @@ This repository is the implementation of our paper "[Facial Action Unit Detectio
 ## Datasets
 [BP4D](http://www.cs.binghamton.edu/~lijun/Research/3DFE/3DFE_Analysis.html) and [DISFA](http://www.engr.du.edu/mmahoor/DISFA.htm)
 
-The 3-fold partitions of both BP4D and DISFA can be found [here](https://github.com/ZhiwenShao/JAANet/tree/master/data)
+The 3-fold partitions of both BP4D and DISFA in terms of AU detection can be found [here](https://github.com/ZhiwenShao/JAANet/tree/master/data)
+The train and test partitions of both BP4D and DISFA are provided in the folder "data"
 
 ## Preprocessing
 - Prepare the training data
